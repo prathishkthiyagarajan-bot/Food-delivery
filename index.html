@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🍔 FoodExpress</h1>
+    <p>Order your favourite food</p>
+</header>
+
+<div class="container">
+
+    <h2>Our Food</h2>
+
+    <div class="category-buttons">
+        <button onclick="showFood('all')">🍽️ ALL</button>
+        <button onclick="showFood('veg')">🥬 VEG</button>
+        <button onclick="showFood('nonveg')">🍗 NON-VEG</button>
+    </div>
+
+    <div class="food-container">
+
+        <div class="food nonveg">
+            <img src="https://i.ytimg.com/vi/DKs4Zjo3CX4/maxresdefault.jpg"
+                 alt="Chicken Rice">
+            <h3>Chicken Rice</h3>
+            <p class="nonveg-label">🍗 NON-VEG</p>
+            <p>₹250</p>
+            <button onclick="add('Chicken Rice', 250, 'nonveg')">
+                Add
+            </button>
+        </div>
+
+        <div class="food nonveg">
+            <img src="https://images.themodernproper.com/production/posts/2016/ClassicCheeseBurger_9.jpg?w=300&q=82&auto=format&fit=crop"
+                 alt="Chicken Burger">
+            <h3>Chicken Burger</h3>
+            <p class="nonveg-label">🍗 NON-VEG</p>
+            <p>₹150</p>
+            <button onclick="add('Chicken Burger', 150, 'nonveg')">
+                Add
+            </button>
+        </div>
+
+        <div class="food nonveg">
+            <img src="https://i.pinimg.com/736x/ce/99/19/ce9919d8c596f8d0d68c14ac5bb3693d.jpg"
+                 alt="Chicken Biryani">
+            <h3>Chicken Biryani</h3>
+            <p class="nonveg-label">🍗 NON-VEG</p>
+            <p>₹220</p>
+            <button onclick="add('Chicken Biryani', 220, 'nonveg')">
+                Add
+            </button>
+        </div>
+
+        <div class="food veg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-zPKgU88g70m302TPVtPLaolRtjxb5R9L-qnDeInHdg&s=10"
+                 alt="Porota">
+            <h3>Porota</h3>
+            <p class="veg-label">🥬 VEG</p>
+            <p>₹150</p>
+            <button onclick="add('Porota', 150, 'veg')">
+                Add
+            </button>
+        </div>
+
+        <div class="food veg">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=500"
+                 alt="Veg Noodles">
+            <h3>Veg Noodles</h3>
+            <p class="veg-label">🥬 VEG</p>
+            <p>₹130</p>
+            <button onclick="add('Veg Noodles', 130, 'veg')">
+                Add
+            </button>
+        </div>
+
+        <div class="food nonveg">
+            <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?w=500"
+                 alt="Chicken Noodles">
+            <h3>Chicken Noodles</h3>
+            <p class="nonveg-label">🍗 NON-VEG</p>
+            <p>₹150</p>
+            <button onclick="add('Chicken Noodles', 150, 'nonveg')">
+                Add
+            </button>
+        </div>
+
+    </div>
+
+    <div class="cart">
+        <h2>🛒 Cart</h2>
+
+        <div id="cart">
+            Cart is empty
+        </div>
+
+        <h3>
+            Total: ₹<span id="total">0</span>
+        </h3>
+    </div>
+
+    <div class="order-form">
+
+        <h2>📦 Customer Details</h2>
+
+        <label>👤 Your Name:</label>
+        <input type="text"
+               id="customerName"
+               placeholder="Enter your name">
+
+        <label>📱 Mobile Number:</label>
+        <input type="tel"
+               id="mobile"
+               placeholder="Enter 10 digit mobile number"
+               maxlength="10">
+
+        <label>📍 Delivery Location:</label>
+        <input type="text"
+               id="location"
+               placeholder="Enter your delivery location">
+
+        <br>
+
+        <button onclick="order()">
+            Place Order
+        </button>
+
+    </div>
+
+    <div id="orderBox" class="orderBox"></div>
+
+    <div class="all-orders">
+
+        <h2>📋 Overall Orders</h2>
+
+        <div id="ordersList">
+            No orders yet.
+        </div>
+
+        <div class="grand-total">
+
+            <h2>
+                💰 Grand Total:
+                ₹<span id="grandTotal">0</span>
+            </h2>
+
+            <p>
+                Total Orders:
+                <strong>
+                    <span id="orderCount">0</span>
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
